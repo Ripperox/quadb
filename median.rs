@@ -15,14 +15,21 @@ fn main() {
         array.push(num);
     }
 
-    match median8i(&array, target) {
-        Some(index) => println!("Found number at index {}", index),
-        None => println!("Not found"),
+    if let Some(med) = median(&array) {
+        println!("The median is: {}", med);
+    } else {
+        println!("The array is empty.");
     }
 }
 
-fn median(arr: &[u32], target: u32) -> Option<usize> {
-    
+fn median(arr: &[u32]) -> Option<f64> {
+
+    let len= arr.len();
+    if len % 2 == 1 {
+        Some(arr[len / 2] as f64)
+    } else {
+        Some((arr[len / 2 - 1] as f64 + arr[len / 2] as f64) / 2.0)
+    }
 }
 
 fn str_to_int(input: &str) -> u32 {

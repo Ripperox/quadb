@@ -7,9 +7,9 @@ fn main() {
     let num = input.trim().parse::<u32>();
     if let Ok(number) = num {
         if prime(number) {
-            println!("{} is a prime number.", number);
+            println!("Prime number");
         } else {
-            println!("{} is not a prime number.", number);
+            println!("Not Prime number");
         }
     } else {
         println!("Please enter a valid number.");
