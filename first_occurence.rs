@@ -11,6 +11,7 @@ fn main() {
         input.clear();
         io::stdin().read_line(&mut input).unwrap();
         let num = str_to_int(&input);
+        
         array.push(num);
     }
 
